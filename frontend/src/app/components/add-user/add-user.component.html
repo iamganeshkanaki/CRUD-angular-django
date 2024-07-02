@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a href="/" class="navbar-brand">FrontEnd</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#" navbarNavAltMarkup
+                arial-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+                    <a class="nav-link" routerLink="/add"></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- content -->
+    <div class="container">
+        <div class="max-auto w-25" style="max-width: 100%;">
+            <h2 class="text-center">Add User</h2>
+            <form [formGroup]="form" (ngSubmit)="addUser()">
+                <!-- name -->
+                <div class="row">
+                    <div class="col-md-12 form-group mb-3">
+                        <label for="name" class="form-label"> Name</label>
+                        <input type="text" name="name" id="name" formControlName="name" class="form-control"
+                            placeholder="Name" required>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="row">
+                    <div class="col-md-12 form-group mb-3">
+                        <label for="email" class="form-label"> Email</label>
+                        <input type="email" name="email" id="email" formControlName="email" class="form-control"
+                            placeholder="Email" required>
+                    </div>
+                </div>
+
+                <!-- Gender -->
+
+                <label for="gender" class="form-label">Gender</label>
+                <div class="form-check">
+                    <input type="text" class="form-check-input" formControlName="gender" name="gender" id="female" value="Female">
+                    <label for="female" class="form-check-label">Female </label>
+                </div>
+
+                <div class="form-check">
+                    <input type="text" class="form-check-input" formControlName="gender" name="gender" id="male" value="Male">
+                    <label for="male" class="form-check-label">Male </label>
+                </div>
+
+                <div class="form-check">
+                    <input type="text" class="form-check-input" formControlName="gender" name="gender" id="other" value="other">
+                    <label for="other" class="form-check-label">Other </label>
+                </div>
+
+                <!-- Button -->
+
+                <div class="col-md-12 form-group">
+                    <input type="submit" value="Submit" class="btn btn-primary w-100" [disabled]="!form.valid"> 
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
