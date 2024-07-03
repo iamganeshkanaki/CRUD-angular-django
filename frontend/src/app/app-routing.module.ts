@@ -12,6 +12,9 @@ export const routes: Routes = [
 ];
 
 @NgModule({
+  declarations: [
+    ViewUserComponent // Add this line
+  ],
     imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule]
   })

@@ -10,18 +10,15 @@ import { ViewUserComponent } from './components/view-user/view-user.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
     AddUserComponent,
     UpdateUserComponent,
     ViewUserComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent],
+  providers: []
 })
 export class AppModule {}

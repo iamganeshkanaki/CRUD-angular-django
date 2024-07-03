@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { UsersService } from '../../users.service';
 
 @Component({
+  standalone: true,
   selector: 'app-view-user',
   templateUrl: './view-user.component.html',
   styleUrl: './view-user.component.css',
